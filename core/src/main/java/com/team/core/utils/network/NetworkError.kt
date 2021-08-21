@@ -1,9 +1,9 @@
-package com.team.core.utils
+package com.team.core.utils.network
 
 import retrofit2.HttpException
 import java.io.IOException
 
-fun netWorkError(ex: Throwable): String? {
+fun netWorkError(ex: Throwable): String {
 
     return when (ex) {
         is IOException -> ex.message.toString()

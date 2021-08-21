@@ -1,4 +1,4 @@
-package com.team.mvvmstructure
+package com.team.nagwa
 
 import org.junit.Test
 

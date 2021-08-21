@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.di
+package com.team.nagwa.di
 
 import com.team.domain.excuter.ThreadExecutor
 import java.util.concurrent.LinkedBlockingQueue

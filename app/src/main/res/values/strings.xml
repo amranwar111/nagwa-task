@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">Mvvm Structure</string>
+    <string name="app_name">Nagwa</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="download">Download</string>
+    <string name="video_name">Video Name</string>
+    <string name="downloading">Downloading</string>
+    <string name="downloaded">Downloaded</string>
 </resources>

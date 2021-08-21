@@ -12,7 +12,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.team.mvvmstructure"
+        applicationId "com.team.nagwa"
         minSdkVersion 16
         targetSdkVersion 30
         versionCode 1
@@ -53,6 +53,7 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.1'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1'
     implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    implementation 'androidx.test:core-ktx:1.4.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -102,6 +103,12 @@ dependencies {
     implementation "com.intuit.ssp:ssp-android:$ssp_sdp_version"
     implementation "com.intuit.sdp:sdp-android:$ssp_sdp_version"
 
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    kapt 'com.github.bumptech.glide:compiler:4.12.0'
+
+    //downloading library
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
 
 }
 kapt {

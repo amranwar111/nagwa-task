@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.app
+package com.team.nagwa.app
 
 import android.app.Application
 import android.content.Context

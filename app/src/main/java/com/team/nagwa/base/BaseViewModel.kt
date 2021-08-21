@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.base
+package com.team.nagwa.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
@@ -27,6 +27,4 @@ open class BaseViewModel : ViewModel() {
 
 
     fun getError(): LiveData<String> = errorState
-
-
 }

@@ -1,4 +1,4 @@
-package com.team.mvvmstructure.di
+package com.team.nagwa.di
 
 import com.team.data.remote.IRemoteData
 import com.team.data.repo.Repo

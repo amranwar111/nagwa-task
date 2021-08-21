@@ -1,6 +1,9 @@
 package com.team.data.dataSource.remote
 
+import com.team.entities.videos.remote.response.VideosResponse
+import io.reactivex.Single
+
 interface IRemoteDataSource {
 
-  //  fun getData(key: String): Single<CurrenciesResponse>
+    fun getVideos(): Single<VideosResponse>
 }

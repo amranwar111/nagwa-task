@@ -1,4 +1,4 @@
-package com.team.mvvmstructure
+package com.team.nagwa
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

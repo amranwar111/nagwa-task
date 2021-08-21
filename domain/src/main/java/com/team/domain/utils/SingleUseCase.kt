@@ -30,7 +30,7 @@ abstract class SingleUseCase<T, in Params> constructor(
         return this.buildUseCaseObservable(params)
             .subscribeOn(Schedulers.from(threadExecutor))
             .observeOn(postExecutionThread.scheduler)
-            .doOnError { }
+            .doOnError {}
 //        addDisposable(single.subscribeWith(singleObserver))
     }
 
