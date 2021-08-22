@@ -2,10 +2,6 @@ package com.team.nagwa.ui
 
 import android.content.Context
 import com.team.entities.videos.Video
-import android.media.MediaMetadataRetriever
-import android.graphics.Bitmap
-import java.lang.Exception
-import android.util.Log
 import java.io.File
 
 
@@ -26,7 +22,7 @@ val Dummy: List<Video> = mutableListOf(
         id = 3,
         type = "PDF",
         url = "https://kotlinlang.org/docs/kotlin-reference.pdf",
-        name = "Video 3",
+        name = "PDF 3",
     ),
     Video(
         id = 4,
@@ -38,7 +34,7 @@ val Dummy: List<Video> = mutableListOf(
         id = 5,
         type = "PDF",
         url = "https://www.cs.cmu.edu/afs/cs.cmu.edu/user/gchen/www/download/java/LearnJava.pdf",
-        name = "Video 5",
+        name = "PDF 5",
     ),
     Video(
         id = 6,
@@ -62,13 +58,13 @@ val Dummy: List<Video> = mutableListOf(
         id = 9,
         type = "PDF",
         url = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-        name = "Video 9",
+        name = "PDF 9",
     ),
     Video(
         id = 10,
         type = "PDF",
         url = "https://en.unesco.org/inclusivepolicylab/sites/default/files/dummy-pdf_2.pdf",
-        name = "Video 10",
+        name = "PDF 10",
     ),
     Video(
         id = 11,
@@ -84,13 +80,16 @@ val Dummy: List<Video> = mutableListOf(
     ),
 )
 
-fun createFile( context:Context,filename: String):File? {
+fun createFile(context: Context, filename: String): File {
+    val output = File(context.getExternalFilesDir(null), filename)
+    output.mkdirs()
+    return output
+}
 
-    val path = (context.getExternalFilesDir("mp4").toString()
-            + "/load")
-    Log.v("LOG_TAG", "PATH: $path")
-
-    val file = File(path)
-    file.mkdirs()
-    return file
+fun createItemName(type: String): String {
+    return if (type == "VIDEO") {
+        ".mp4"
+    } else {
+        ".pdf"
+    }
 }

@@ -13,6 +13,7 @@ import com.team.entities.videos.Video
 import com.team.nagwa.R
 import com.team.nagwa.databinding.VideoItemBinding
 import com.team.nagwa.ui.createFile
+import com.team.nagwa.ui.createItemName
 import javax.inject.Inject
 
 class VideoAdapter @Inject constructor(
@@ -83,7 +84,11 @@ class VideoAdapter @Inject constructor(
     private fun downloadFile(binding: VideoItemBinding, item: Video) {
         PRDownloader.download(
             item.url,
-            createFile(context, item.name.toString())?.absolutePath, item.name
+            item.name?.let { createFile(context, it).absolutePath }, item.name + item.type?.let {
+                createItemName(
+                    it
+                )
+            }
         )
             .build()
             .setOnStartOrResumeListener {
